@@ -40,6 +40,14 @@ class SettingsPage extends StatelessWidget {
                   subtitle: Text('salsa'),
                   leading: Icon(Icons.person, size: 38),
                 ),
+                const Divider(),
+                ListTile(
+                  leading: const Icon(Icons.public),
+                  title: const Text('Abrir WebView'),
+                  subtitle: const Text('WebView com URL fixa'),
+                  onTap: () => context.push('/webview'),
+                ),
+                const Divider(),
                 Expanded(
                   child: Align(
                     alignment: Alignment.bottomLeft,
