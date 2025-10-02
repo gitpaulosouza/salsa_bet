@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Salsa Bet</title>
+        <style>
+            body {
+              font-family: sans-serif;
+              text-align: center;
+              padding: 50px;
+            }
+            button {
+              padding: 10px 20px;
+              font-size: 18px;
+              background: #6200ee;
+              color: white;
+              border: none;
+              border-radius: 8px;
+            }
+        </style>
+        <script>
+            function sendMessageToFlutterProject() {
+              MockChannel.postMessage("Mensagem do site HTML");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Mock WebView</h1>
+        <p>Página HTML </p>
+        <button onclick="sendMessageToFlutterProject()">Enviar para Flutter</button>
+    </body>
+</html>
