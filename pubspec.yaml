@@ -39,6 +39,8 @@ dev_dependencies:
   mocktail: ^1.0.3
   hive_test: ^1.0.1
 
+  flutter_launcher_icons: ^0.13.1
+
 flutter:
   uses-material-design: true
 
@@ -46,3 +48,8 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/html/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/favicon.png"
