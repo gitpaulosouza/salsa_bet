@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:go_router/go_router.dart';
+import 'package:salsa_challenge/core/constants/app_assets.dart';
 import 'package:salsa_challenge/stores/login/login_store.dart';
 
 class LoginPage extends StatefulWidget {
@@ -23,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
     loginStore.loadLoginStatus().then((_) {
       if (loginStore.isLoggedIn) {
-        context.go('/home'); // já redireciona se estiver logado
+        context.go('/home');
       }
     });
   }
@@ -39,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 120,
               child: Image.asset(
-                'assets/icons/favicon.png',
+                AppAssets.favicon,
                 fit: BoxFit.contain,
               ),
             ),
