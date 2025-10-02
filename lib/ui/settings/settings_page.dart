@@ -35,12 +35,6 @@ class SettingsPage extends StatelessWidget {
                       ),
                 ),
                 const Divider(),
-                const ListTile(
-                  title: Text('Usuário logado'),
-                  subtitle: Text('salsa'),
-                  leading: Icon(Icons.person, size: 38),
-                ),
-                const Divider(),
                 ListTile(
                   leading: const Icon(Icons.public),
                   title: const Text('Abrir WebView'),
