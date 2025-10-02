@@ -65,36 +65,21 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 24),
 
-            Observer(
-              builder: (_) => SizedBox(
-                width: 300,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () async {
-                    final success = await loginStore.login(
-                      _usernameController.text,
-                      _passwordController.text,
-                    );
-                    if (success) {
-                      context.go('/home');
-                    }
-                  },
-                  child: const Text("Login"),
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 24),
-            Observer(
-              builder: (_) {
-                if (loginStore.errorMessage != null) {
-                  return Text(
-                    loginStore.errorMessage!,
-                    style: const TextStyle(color: Colors.red),
+            SizedBox(
+              width: 300,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () async {
+                  final success = await loginStore.login(
+                    _usernameController.text,
+                    _passwordController.text,
                   );
-                }
-                return const SizedBox.shrink();
-              },
+                  if (success) {
+                    context.go('/home');
+                  }
+                },
+                child: const Text("Login"),
+              ),
             ),
 
             const SizedBox(height: 24),
