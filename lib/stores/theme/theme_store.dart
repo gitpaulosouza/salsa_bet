@@ -9,14 +9,14 @@ abstract class _ThemeStore with Store {
   final ThemeService _service;
 
   _ThemeStore(this._service) {
-    _init();
+    _initTheme();
   }
 
   @observable
   bool isDarkMode = false;
 
   @action
-  Future<void> _init() async {
+  Future<void> _initTheme() async {
     isDarkMode = await _service.loadTheme();
   }
 
