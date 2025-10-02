@@ -83,9 +83,17 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             const SizedBox(height: 24),
-            const Text(
-              'Os campos usuário e senha são "salsa"',
-              style: TextStyle(fontSize: 16),
+
+            Observer(
+              builder: (_) {
+                if (loginStore.errorMessage != null) {
+                  return Text(
+                    loginStore.errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                  );
+                }
+                return const SizedBox.shrink();
+              },
             ),
           ],
         ),
