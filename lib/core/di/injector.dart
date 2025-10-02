@@ -16,6 +16,8 @@ Future<void> setupDependencies() async {
   await Hive.initFlutter();
   final favoritesBox = await Hive.openBox('favorites_box');
 
+  getIt.registerSingleton<SharedPreferences>(prefs);
+
   // Services
   getIt.registerLazySingleton<LoginService>(() => LoginServiceImpl(getIt()));
   getIt.registerLazySingleton<ItemService>(() => MockItemService());
