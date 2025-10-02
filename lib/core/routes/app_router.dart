@@ -4,6 +4,7 @@ import 'package:salsa_challenge/stores/login/login_store.dart';
 import 'package:salsa_challenge/ui/home/home_page.dart';
 import 'package:salsa_challenge/ui/login/login_page.dart';
 import 'package:salsa_challenge/ui/settings/settings_page.dart';
+import 'package:salsa_challenge/ui/webview/webview_page.dart';
 
 final router = GoRouter(
   routes: [
@@ -20,6 +21,10 @@ final router = GoRouter(
     GoRoute(
       path: '/settings',
       builder: (context, state) => const SettingsPage(),
+    ),
+    GoRoute(
+      path: '/webview',
+      builder: (context, state) => const WebViewPage(),
     ),
   ],
 );
