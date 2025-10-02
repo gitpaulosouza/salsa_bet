@@ -22,12 +22,9 @@ class HomePage extends StatelessWidget {
         title: const Text('Home'),
         actions: [
           IconButton(
-            tooltip: 'Logout',
-            icon: const Icon(Icons.logout),
-            onPressed: () async {
-              await loginStore.logout();
-              if (context.mounted) context.go('/');
-            },
+            tooltip: 'Configurações',
+            icon: const Icon(Icons.settings),
+            onPressed: () => context.go('/settings'),
           ),
         ],
       ),
