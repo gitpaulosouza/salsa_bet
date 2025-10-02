@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:salsa_challenge/core/di/injector.dart';
 import 'package:salsa_challenge/models/item/item_model.dart';
 import 'package:salsa_challenge/services/item/item_service.dart';
-import 'package:salsa_challenge/stores/favorites/favorites_stores.dart';
+import 'package:salsa_challenge/stores/favorites/favorite_store.dart';
 import 'package:salsa_challenge/stores/login/login_store.dart';
 import 'package:salsa_challenge/ui/home/widgets/item_card.dart';
 
