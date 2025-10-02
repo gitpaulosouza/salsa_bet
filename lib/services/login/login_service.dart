@@ -15,7 +15,6 @@ class LoginServiceImpl implements LoginService {
   @override
   Future<bool> login(String username, String password) async {
     if (username == 'salsa' && password == 'salsa') {
-      final prefs = await SharedPreferences.getInstance();
       await prefs.setBool(_keyIsLoggedIn, true);
       return true;
     }
@@ -24,13 +23,11 @@ class LoginServiceImpl implements LoginService {
 
   @override
   Future<void> logout() async {
-    final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(_keyIsLoggedIn, false);
   }
 
   @override
   Future<bool> loadLoginStatus() async {
-    final prefs = await SharedPreferences.getInstance();
     return prefs.getBool(_keyIsLoggedIn) ?? false;
   }
 }
